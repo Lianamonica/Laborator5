@@ -1,35 +1,22 @@
 #include <iostream>
-#include <cctype>
-#include <cmath>
 
 using namespace std;
 
-int main()
-{
-    char rasp, varianta;
-    double x;
-    rasp = 'd';
-    while (tolower(rasp) == 'd')
-    {
-        cout << "Unghiul: "; cin >> x;
-        cout << "Ce doriti sa calculati : (s - sin, c - cos, t - tan) : ";
-        cin >> varianta;
-        switch (varianta) {
-        case 's' :
-            cout << "sin = " << sin(3.14159 * x / 180.) << endl;
-            break;
-        case 'c' :
-            cout << "cos = " << cos(3.14159 * x / 180.) << endl;
-            break;
-        case 't' :
-            cout << "tan = " << sin(3.14159 * x / 180.)/
-                                cos(3.14159 * x / 180.) << endl;
-            break;
-        default:
-            cout << "Caracter incorect!";
-        }
-        cout << "Mai continuati? (d/n) : ";
-        cin >> rasp;
+int main(){
+    int a[20], nr, i;
+    cout << "Numarul de elemente din sirul a (maximum 20) ";
+    cin >> nr;
+    for (i = 0; i < nr; i++) {
+        cout << "a[" << i << "] = ";
+        cin >> a[i];
     }
+    for (i = 0; i < nr; i++) {
+        if(a[i] < 0)
+            a[i] = -a[i];
+    }
+    for (i = 0; i < nr; i++) {
+        cout << a[i] << ", ";
+    }
+    cout << endl;
     return 0;
 }
