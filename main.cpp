@@ -1,22 +1,18 @@
 #include <iostream>
+#include "Laborator5.h"
 
 using namespace std;
 
+//  Prototipuri
+void schimba(int [], int);
+int minim(int [], int);
+
+
 int main(){
-    int a[20], nr, i;
-    cout << "Numarul de elemente din sirul a (maximum 20) ";
-    cin >> nr;
-    for (i = 0; i < nr; i++) {
-        cout << "a[" << i << "] = ";
-        cin >> a[i];
-    }
-    for (i = 0; i < nr; i++) {
-        if(a[i] < 0)
-            a[i] = -a[i];
-    }
-    for (i = 0; i < nr; i++) {
-        cout << a[i] << ", ";
-    }
-    cout << endl;
+    int a[] = {12, -14, 7, 23, 5, -71, 4};
+    schimba(a, 7);   //  In sir sunt 7 elemente
+    int mini = minim(a, 7);
+    cout << "Minimul valorilor dupa schimbarea semnelor este: " << mini << endl;
     return 0;
 }
+
